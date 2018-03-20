@@ -40,10 +40,13 @@ class Fetch extends Component {
         </div>
       );
     }
-    const schools = data.schools[0].name;
+    const schoolsList = data.schools.map((el) => <p>{el.name}</p>);
     return (
       <div>
-        <p>{schools}</p>
+        <h1>Próftöflur</h1>
+        <style>{`h1 {font-size:50px; text-decoration:underline; }`}</style>
+        <div className="schoolsList">{schoolsList}</div>
+        <style>{`.schoolsList {display: flex; flex-direction: row; justify-content:space-between; text-decoration:underline;}`}</style>
       </div>
     );
   }
