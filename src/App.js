@@ -14,7 +14,7 @@ class App extends Component {
 
     return (
       <main className="app">
-        <p>útfæra</p>
+        <Route exact path="/" component={Navigation}/>
       </main>
     );
   }
