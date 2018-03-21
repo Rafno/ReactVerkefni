@@ -11,10 +11,12 @@ import NotFound from './components/not-found';
 
 class App extends Component {
   render() {
+    const url = { slug : 'https://vefforritun2-2018-v4-synilausn.herokuapp.com/'};
 
     return (
       <main className="app">
-        <Route exact path="/" component={Navigation}/>
+        <Navigation slug={url}/>
+        <Route exact path="/" component={Home} />
       </main>
     );
   }

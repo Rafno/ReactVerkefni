@@ -3,6 +3,14 @@ import PropTypes from 'prop-types';
 
 import './Navigation.css';
 
+class Stats extends Component {
+  render() {
+    console.log(this.props);
+    return (
+      <p>hey</p>
+      );
+  }
+}
 class Fetch extends Component {
 
   state = { data: null, loading: true, error: false }
@@ -24,7 +32,6 @@ class Fetch extends Component {
   }
   render() {
     const { data, loading, error } = this.state;
-
     if (loading) {
       return (
         <div>
@@ -40,7 +47,9 @@ class Fetch extends Component {
         </div>
       );
     }
-    const schoolsList = data.schools.map((el) => <p>{el.name}</p>);
+    const schoolsList = data.schools.map((el) =>
+      <a href={el.slug}>{el.name}</a>
+    );
     return (
       <div>
         <h1>Próftöflur</h1>
@@ -54,10 +63,10 @@ class Fetch extends Component {
 export default class Navigation extends Component {
 
   render() {
-
     return (
       <nav className="navigation">
-        <Fetch />
+        <Fetch/>
+        <Stats slug={this.props}/>
       </nav>
     );
   }
