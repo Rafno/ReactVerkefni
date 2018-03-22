@@ -3,14 +3,6 @@ import PropTypes from 'prop-types';
 
 import './Navigation.css';
 
-class Stats extends Component {
-  render() {
-    console.log(this.props);
-    return (
-      <p>hey</p>
-      );
-  }
-}
 class Fetch extends Component {
 
   state = { data: null, loading: true, error: false }
@@ -66,7 +58,6 @@ export default class Navigation extends Component {
     return (
       <nav className="navigation">
         <Fetch/>
-        <Stats slug={this.props}/>
       </nav>
     );
   }
