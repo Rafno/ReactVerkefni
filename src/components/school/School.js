@@ -10,6 +10,12 @@ import './School.css';
  */
 
 export default class School extends Component {
+  constructor() {
+    super();
+    this.state = {
+      loading: true,
+    };
+  }
 
   render() {
 
