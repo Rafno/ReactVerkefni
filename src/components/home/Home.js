@@ -6,7 +6,9 @@ import './Home.css';
 
 /* hér ætti að sækja forsíðu vefþjónustu til að sækja stats */
 
+
 export default class Home extends Component {
+
   render() {
     const { stats } = this.props;
 
@@ -19,6 +21,7 @@ export default class Home extends Component {
         <p>Meðalfjöldi nemanda í prófi: -> {stats.stats.averageStudents}</p>
         <p>Minnsti fjöldi nemanda í prófi: -> {stats.stats.min}</p>
         <p>Mesti fjöldi nemanda í prófi: -> {stats.stats.max}</p>
+
       </div>
     );
   }

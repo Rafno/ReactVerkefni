@@ -3,12 +3,14 @@ import PropTypes from "prop-types";
 
 import "./Navigation.css";
 
+
 export default class Navigation extends Component {
   render() {
     const { navigation } = this.props;
     const schoolsList = navigation.map(({ name, link, slug }) => <a href={slug}>{name}</a>);
     return (
       <nav className="navigation">
+
         <div>
           <h1>Próftöflur</h1>
           <style>{`h1 {font-size:50px; text-decoration:underline;  }`}</style>
