@@ -40,13 +40,11 @@ class App extends Component {
             <Home {...props} stats={stats} />
           )} />
           {navigation.map(({ name, link, slug }) =>
-          /*TODO, dynamic parsea link*/ 
-            <Route
-              exact path={link}
-              component={School}
-            />
+            <Route exact path={link} render={(props) => (
+              <School {...props} slug={slug} />
+            )} />
             )}
-          <Route exact path="/:id" component={NotFound} />
+          <Route path="/:id" component={NotFound} />
         </Switch>
       </main>
     );

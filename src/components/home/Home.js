@@ -11,7 +11,6 @@ export default class Home extends Component {
 
   render() {
     const { stats } = this.props;
-
     return (
       <div className="home">
         <h2>Tölfræði</h2>

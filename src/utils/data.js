@@ -3,6 +3,10 @@ const API = "https://vefforritun2-2018-v4-synilausn.herokuapp.com";
 export async function fetchNavigation() {
   const response = await fetch(API);
   const data = await response.json();
+  data.schools.map(async el => {
+    el.slug = await fetchDynamic(el.slug);
+    el.slug = el.slug.school;
+  });
   return data.schools;
 }
 

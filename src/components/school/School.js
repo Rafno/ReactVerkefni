@@ -18,10 +18,11 @@ export default class School extends Component {
   }
 
   render() {
-
+    const { slug } = this.props;
+    console.log(slug);
     return (
       <section className="school">
-        <p>útfæra</p>
+        <p>Nýr skóli</p>
       </section>
     );
   }
