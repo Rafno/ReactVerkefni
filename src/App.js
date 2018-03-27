@@ -36,6 +36,10 @@ class App extends Component {
     return (
       <main className="app">
         <Navigation navigation={navigation} />
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Finals table</title>
+        </Helmet>
         <Switch>
           <Route exact path='/' render={(props) => (
             <Home {...props} stats={stats} />
