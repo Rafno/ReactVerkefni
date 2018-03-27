@@ -13,6 +13,9 @@ export default class Home extends Component {
     const { stats } = this.props;
     return (
       <div className="home">
+        <Helmet>
+          <title>Stats</title>
+        </Helmet>
         <h2>Tölfræði</h2>
         <div className="line">
           <b>Fjöldi prófa: </b>
@@ -38,4 +41,7 @@ export default class Home extends Component {
       </div>
     );
   }
+}
+Home.propTypes = {
+  stats: PropTypes.array.isRequired,
 }

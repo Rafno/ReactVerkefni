@@ -18,3 +18,6 @@ export default class Navigation extends Component {
     );
   }
 }
+Navigation.propTypes = {
+  navigation: PropTypes.array.isRequired,
+}

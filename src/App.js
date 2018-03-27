@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Helmet from "react-helmet";
-import { Route, Link, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 import "./App.css";
 
@@ -9,7 +9,7 @@ import School from "./components/school";
 import Navigation from "./components/navigation";
 import NotFound from "./components/not-found";
 // Fetch fall sem sækir gögnin, hægir gríðarlega ef gögn eru mikil en alveg í lagi fyrir þetta verkefni.
-import { fetchNavigation, fetchDynamic} from "./utils/data";
+import { fetchNavigation, fetchDynamic } from "./utils/data";
 
 class App extends Component {
   constructor() {
@@ -17,7 +17,7 @@ class App extends Component {
     this.state = {
       loading: true,
       navigation: null,
-      stats:null
+      stats: null
     };
   }
   async componentDidMount() {
@@ -37,18 +37,17 @@ class App extends Component {
       <main className="app">
         <Navigation navigation={navigation} />
         <Helmet>
-          <meta charSet="utf-8" />
-          <title>Finals table</title>
+          <title>Ugla Tests</title>
         </Helmet>
         <Switch>
           <Route exact path='/' render={(props) => (
             <Home {...props} stats={stats} />
           )} />
           {navigation.map(({ name, link, slug }) =>
-            <Route exact path={link} render={(props) => (
+            <Route path={link} render={(props) => (
               <School {...props} slug={slug} />
             )} />
-            )}
+          )}
           <Route path="/:id" component={NotFound} />
         </Switch>
       </main>

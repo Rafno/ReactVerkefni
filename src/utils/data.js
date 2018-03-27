@@ -6,7 +6,6 @@ export async function fetchNavigation() {
   data.schools.map(async el => {
     el.slug = await fetchDynamic(el.slug);
     el.slug = await el.slug.school;
-    console.log(el.slug);
   });
   return data.schools;
 }

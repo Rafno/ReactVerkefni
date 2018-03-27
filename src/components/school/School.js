@@ -49,3 +49,6 @@ export default class School extends Component {
     );
   }
 }
+School.propTypes = {
+  slug: PropTypes.object.isRequired,
+}

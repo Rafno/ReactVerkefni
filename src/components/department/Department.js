@@ -34,3 +34,9 @@ export default class Exams extends Component {
     );
   }
 }
+Exams.propTypes = {
+  heading: PropTypes.string.isRequired,
+  tests: PropTypes.array.isRequired,
+  visible: PropTypes.bool,
+  onHeaderClick: PropTypes.func,
+}
