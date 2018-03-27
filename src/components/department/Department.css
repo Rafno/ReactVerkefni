@@ -1,1 +1,4 @@
 /* útfæra */
+.deild:nth-child(even) {
+    background-color: #dddddd;
+}

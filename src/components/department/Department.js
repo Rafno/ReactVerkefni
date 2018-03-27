@@ -9,12 +9,27 @@ import './Department.css';
  */
 
 export default class Exams extends Component {
-
   render() {
-
+    const { onHeaderClick, heading, tests, visible } = this.props;
+    const plus = visible ? '- ' : '+ ';
     return (
       <section className="department">
-        <p>útfæra</p>
+        <h3 onClick={onHeaderClick}>{plus}{heading}</h3>
+        {visible && (<table>
+          <tr>
+            <th>Auðkenni</th>
+            <th>Námskeið</th>
+            <th>Fjöldi</th>
+            <th>Dagsetning</th>
+          </tr>
+          {tests.map(el => (<tr className="deild">
+            <td>{el.course}</td>
+            <td>{el.name}</td>
+            <td>{el.students}</td>
+            <td>{el.date}</td>
+          </tr>))}
+        </table>
+        )}
       </section>
     );
   }

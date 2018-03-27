@@ -8,6 +8,7 @@ import Home from "./components/home";
 import School from "./components/school";
 import Navigation from "./components/navigation";
 import NotFound from "./components/not-found";
+// Fetch fall sem sækir gögnin, hægir gríðarlega ef gögn eru mikil en alveg í lagi fyrir þetta verkefni.
 import { fetchNavigation, fetchDynamic} from "./utils/data";
 
 class App extends Component {

@@ -8,6 +8,7 @@ export default class Home extends Component {
       <div>
         <Helmet title="Síða fannst ekki" />
         <p>Síða fannst ekki</p>
+        <a href="/">Heim</a>
       </div>
     );
   }
